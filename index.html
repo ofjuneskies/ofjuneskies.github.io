@@ -1,47 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Of June Skies</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8"> 
     <link href='https://fonts.googleapis.com/css?family=Silkscreen' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
 
 </head>
 <header>
-    <div id = "intro">
-        <br>
-        <br>
-        <img src="images/84915772842628655076.jpg" class = "banner">
-        <div class="centered">
-            <h2>Of June Skies</h2>
-            <button id = "name" ><span>Jenny Liu</span></button>
+    <div class = "banner">
+        <div class="name"></div>
+        <div class="clouds">
+            <img src = "images/cloud1.png" style="--i:1;">
+            <img src = "images/cloud2.png" style="--i:2;">
+            <img src = "images/cloud3.png" style="--i:3;">
+            <img src = "images/cloud4.png" style="--i:4;">
+            <img src = "images/cloud5.png" style="--i:5;">
+            <img src = "images/cloud1.png" style="--i:10;">
+            <img src = "images/cloud2.png" style="--i:9;">
+            <img src = "images/cloud3.png" style="--i:8;">
+            <img src = "images/cloud4.png" style="--i:7;">
+            <img src = "images/cloud5.png" style="--i:6;">
+        </div>
+    </div>
+    <div class = "justClouds">
+        <div class="clouds-down">
+            <img src = "images/cloud1.png" style="--i:1;">
+            <img src = "images/cloud2.png" style="--i:2;">
+            <img src = "images/cloud3.png" style="--i:3;">
+            <img src = "images/cloud4.png" style="--i:4;">
+            <img src = "images/cloud5.png" style="--i:5;">
+            <img src = "images/cloud1.png" style="--i:10;">
+            <img src = "images/cloud2.png" style="--i:9;">
+            <img src = "images/cloud3.png" style="--i:8;">
+            <img src = "images/cloud4.png" style="--i:7;">
+            <img src = "images/cloud5.png" style="--i:6;">
         </div>
     </div>
 </header>
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
     <div id = "about">
-        <h4>&emsp;about</h4>
-        <br><br><br><br><br><br>
+        
+        <h4 class="about_text">&emsp;about</h4>
+        <br><br><br><br>
         <div class="container">
-            <div>
-                <img class="image" src="images/IMG_3295.jpg" height="400">
-            </div>  
+            <div class="parent">
+                <div class = "wrapper">
+                    <p class = layer2>Fun fact! My brand, OfJuneSkies, is my username on most platforms.
+                        It was inspired by the name of an album, <i>Of June</i>, by my childhood artist Owl City. 
+                        I added "Skies" because I love the sky, the stars,
+                        and everything beyond our atmosphere.
+                    </p>
+                    <!-- <img class="layer2" src="images/IMG_3192.jpg" height ="400"> -->
+                    <img class="image me_image" src="images/IMG_3295.jpg" height="400"> 
+                </div> 
+ 
+            </div>
             <div class="paragraph">
                 <p>Hello, my name is Jenny and I'm a second year computer science and engineering
                     major at UC Irvine. At school, I'm one of the co-chairs 
                     for the Community Outreach Committee for WICS, as well as an organizer in 
                     the logistics committee for VenusHacks and Hack at UCI. 
                     I have an interest in backend development and machine learning, 
-                    with experience in software with Python and C++, as well as hardware.
+                    with experience in software with Python, C++, and HTML/CSS, as well as hardware.
                     In my free time, I enjoy playing video games, listening to music, 
-                    and going on adventures with friends! I also love the sky, the stars,
-                    and everything beyond our atmosphere.
+                    and going on adventures with friends! 
                 </p>
             </div>
+        </div>
+    </div>
+    <br><br>
+    <div id = "experience">
+        <h4 class="exp_text">Experience</h4>
+        <div class="container">
+            <div class="parent">
+                <div class = "wrapper">
+                    <p class = layer2><i>WICS Community Outreach Committee Member</i>
+                        <br>
+                        December 2021 - June 2023
+                        <br> <br>
+                        <i>WICS Community Outreach Co-Chair</i>
+                        <br>
+                        June 2023 - Present
+                    </p>
+                    <img class="image left_image" src="images/wics.png" height="310"> 
+                </div> 
+            </div>
+            <div class="parent">
+                <div class = "wrapper">
+                    <p class = layer2>&emsp;<i>VenusHacks Logistics <br>&emsp;Organizer</i>
+                        <br>
+                        &emsp;January 2023 - Present
+                    </p>
+                    <img class="image right_image" src="images/vh.png" height="310"> 
+                </div> 
+            </div>
+
+            <div class="parent">
+                <div class = "wrapper">
+                    <p class = layer2><i>Hack at UCI Logistics<br>Organizer</i>
+                        <br>
+                        May 2023 - Present
+                    </p>
+                    <img class="image right_image" src="images/hack-modified.png" height="310"> 
+                </div> 
+            </div>
+            
+            <div class="parent">
+                <div class = "wrapper">
+                    <p class = layer2><i>ICS 31 Learning Assistant<br>Organizer</i>
+                        <br>
+                        September 2022 - December 2022
+                    </p>
+                    <img class="image left_image" src="images/UCI.png" height="310"> 
+                </div> 
+            </div>
+
+            
         </div>
     </div>
     
@@ -50,7 +127,6 @@
         <p class = "quote">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             ― L. M. Montgomery, Anne of the Island</p>
     </div>
-
     <div id = "spotify">
         june tunes ☆彡
         <br>
@@ -126,10 +202,37 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy">
         </iframe>
-
-        <br>
         
     </div>
+    <div class = "justClouds">
+        <div class="clouds">
+            <img src = "images/cloud1.png" style="--i:1;">
+            <img src = "images/cloud2.png" style="--i:2;">
+            <img src = "images/cloud3.png" style="--i:3;">
+            <img src = "images/cloud4.png" style="--i:4;">
+            <img src = "images/cloud5.png" style="--i:5;">
+            <img src = "images/cloud1.png" style="--i:10;">
+            <img src = "images/cloud2.png" style="--i:9;">
+            <img src = "images/cloud3.png" style="--i:8;">
+            <img src = "images/cloud4.png" style="--i:7;">
+            <img src = "images/cloud5.png" style="--i:6;">
+        </div>
+    </div>
+    <div class = "ground">
+        <div class="clouds-down">
+            <img src = "images/cloud1.png" style="--i:1;">
+            <img src = "images/cloud2.png" style="--i:2;">
+            <img src = "images/cloud3.png" style="--i:3;">
+            <img src = "images/cloud4.png" style="--i:4;">
+            <img src = "images/cloud5.png" style="--i:5;">
+            <img src = "images/cloud1.png" style="--i:10;">
+            <img src = "images/cloud2.png" style="--i:9;">
+            <img src = "images/cloud3.png" style="--i:8;">
+            <img src = "images/cloud4.png" style="--i:7;">
+            <img src = "images/cloud5.png" style="--i:6;">
+        </div>
+    </div>
+
 
     <div id="contact">
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/ofjuneskies"><img class="button1" src="images/githubwhite.png"></a>
@@ -138,4 +241,5 @@
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jennyliu623/"><img class="button1" src="images/linkedin.png"></a>
         <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1JjXS0yq7JbZqVP0voa5IYHUgO0XEjCBkp9oGhGW6W1k/edit?usp=sharing"><img class="button1" src="images/1686295260379.png"></a>
     </div>
+
 </body>

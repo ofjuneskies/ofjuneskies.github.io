@@ -1,9 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #spotify{
     padding: 50px 10px 50px 10px;
-    background-color: #b696ad;
+    background-color: #c299b0;
     line-height: 1;
-    margin: 0px 250px 75px 250px;
-    border: 7px solid #9f7fa6;
+    margin: 75px 250px 0px 250px;
+    border: 7px solid #9e7a8e;
     border-radius: 50px;
     vertical-align: middle;
 
@@ -15,27 +21,51 @@
     color: white;
 }
 
-#intro{
-    font-family: "Silkscreen";
-    position: relative;
-    text-align: center;
-    color: white;
-}
+@keyframes changeContent {
+    0% {
+      opacity: 1;
+      content: "jenny liu"
+    }
+    17% {
+      opacity: 0;
+    }
+    33% {
+        opacity: 1;
+        content: "of june skies"
+    }
+    50% {
+        opacity: 0;
+    }
+    67% {
+      opacity: 1;
+      content: "刘书瑷";
+    }
+    83%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        content: "jenny liu";
+    }
+  }
 
-#name{
-    height: 70px;
-    font-family: "Silkscreen";
+.name{
+    max-height: 70px;
+    min-height: 70px;
+    font-family: "Josefins Sans";
     position: relative;
     text-align: center;
     color: white;
-    background-color: transparent;
     border: none;
-    font-size: 50px;
+    font-size: 65px;
+    margin-bottom: 90px;
+    margin-top: 90px;
 }
 
-#name:hover::before{
-    content: "刘书瑷";
-    cursor: crosshair;
+.name:after{
+    animation-fill-mode: forwards;
+    animation: changeContent 7s linear infinite forwards;
+    content: 'jenny liu'
 }
 
 #name:hover span{
@@ -51,30 +81,85 @@
 }
 
 .banner{
-    max-width: 50%;
-    height: auto;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/sky1.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body{
-    background-color: #7287c4;
+
+.banner .clouds{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     pointer-events: none;
+     margin-top: 90px;
 }
+
+.banner .clouds img{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animate calc(3s * var(--i)) linear infinite;
+}
+
+.clouds-down{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    transform: scaleY(-1);
+}
+
+.clouds-down img{
+   position: absolute;
+   bottom: 0;
+   max-width: 100%;
+   animation: animate calc(3s * var(--i)) linear infinite;
+}
+
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    25%,75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+
 
 #contact{
-    background-color: #5070bc;
-    height: 230px;
+    background-color: #05080f;
+    height: 120px;
     text-align: center;
 }
 
 .button1{
-    height: 90px;
+    height: 60px;
     display: flex;
     gap: 50px;
-    padding-top: 70px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
     width: auto;
     display: inline-block;
-    margin: 0px 15px 0px 15px;
+    margin: 10px 15px 0px 15px;
 
 }
 
@@ -83,16 +168,15 @@ body{
 }
 
 #about{
-    background-color: #7570ab;
-    padding: 0px 30px 30px 30px;
+    background-color: #7c7ba5;
+    padding: 30px 30px 30px 30px;
     line-height: 1;
     margin: 0px 250px 0px 250px;
-    border: 7px solid #666294;
+    border: 7px solid #66648b;
     border-radius: 50px;
-    
 }
 
-h4{
+.about_text{
     font-family: "Anton";
     font-size: 40px;
     color: white;
@@ -110,9 +194,64 @@ h4{
 
 .image{
     flex-basis: 20%;
+    position: relative;
+    right: 0px;
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+.me_image{
+    flex-basis: 20%;
     border-radius: 20px;
     box-shadow: 8px 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    right: 0px;
+    transition: 1.5s;
 }
+
+.left_image{
+    margin-left: 0px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.right_image{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+
+.wrapper:hover .me_image {
+    transition: 1.5s;
+    right: 300px; 
+}
+
+.wrapper:hover .left_image{
+    transition: 1.5s;
+    right: 300px; 
+}
+
+.wrapper:hover .right_image{
+    transition: 1.5s;
+    right: -300px; 
+}
+
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .layer2 {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    font-family: Silkscreen;
+    color: white;
+    line-height: 20px;
+  }
 
 .container{
     display: flex;
@@ -120,11 +259,24 @@ h4{
     justify-content: center
 }
 
+#experience{
+    margin-top: 50px;
+}
+
+.exp_text{
+    font-family: "Anton";
+    font-size: 40px;
+    color: white;
+    letter-spacing: 6px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 #break{
     padding: 50px 10px 50px 10px;
     background-color: #a5aad1;
     line-height: 1;
-    margin: 75px 250px 40px 250px;
+    margin: 75px 500px 40px 500px;
     border: 7px solid #8387a8;
     border-radius: 50px;
     vertical-align: middle;
@@ -138,10 +290,48 @@ h4{
     font-size: 18px;
 }
 
-.astronaut{
-    height: 100px;
-    width: auto;
-    display: block;
-    margin-left: 400px; /* auto for center */
-    margin-right: auto;
+.ground{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(images/ground.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.justClouds{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.justClouds .clouds{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     pointer-events: none;
+}
+
+.justClouds .clouds img{
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: animate calc(3s * var(--i)) linear infinite;
+}
+
+body{
+    background-image: linear-gradient(white, #aa9cc0, #a99bbf, #c8acc3, #d2abc0, white);
 }
