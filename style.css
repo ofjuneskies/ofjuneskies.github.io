@@ -209,14 +209,7 @@
     transition: 1.5s;
 }
 
-.left_image{
-    margin-left: 0px;
-    margin-bottom: 30px;
-    overflow: hidden;
-}
-
-.right_image{
-    margin-left: 10px;
+.exp_image{
     margin-right: 10px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -228,15 +221,11 @@
     right: 300px; 
 }
 
-.wrapper:hover .left_image{
-    transition: 1.5s;
-    right: 300px; 
+.wrapper:hover .exp_image{
+    transition: 0.8s;
+    opacity: 0;
 }
 
-.wrapper:hover .right_image{
-    transition: 1.5s;
-    right: -300px; 
-}
 
 .parent {
     position: relative;
