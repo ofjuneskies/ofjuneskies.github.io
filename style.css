@@ -4,23 +4,14 @@
     box-sizing: border-box;
 }
 
-#spotify{
-    padding: 50px 10px 50px 10px;
-    background-color: #c299b0;
-    line-height: 1;
-    margin: 75px 250px 0px 250px;
-    border: 7px solid #9e7a8e;
-    border-radius: 50px;
-    vertical-align: middle;
-
-    /* text */
-    text-align: center;
-    font-size: 50px;
-    letter-spacing: 2px;
-    font-family: "Avantgarde", cursive;
-    color: white;
+body{
+    background-image: linear-gradient(white, #aa9cc0, #a99bbf, #c8acc3, #d2abc0, white);
 }
 
+nav{
+    position: absolute;
+    font-size: 20px;
+}
 @keyframes changeContent {
     0% {
       opacity: 1;
@@ -73,12 +64,6 @@
 }
 
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .banner{
     position: relative;
@@ -144,32 +129,9 @@
 
 
 
-#contact{
-    background-color: #05080f;
-    height: 120px;
-    text-align: center;
-}
-
-.button1{
-    height: 60px;
-    display: flex;
-    gap: 50px;
-    padding-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    display: inline-block;
-    margin: 10px 15px 0px 15px;
-
-}
-
-.button1:hover{
-    transform: scale(1.1);
-}
-
 #about{
     background-color: #7c7ba5;
-    padding: 30px 30px 30px 30px;
+    padding: 0px 50px 50px 30px;
     line-height: 1;
     margin: 0px 250px 0px 250px;
     border: 7px solid #66648b;
@@ -192,6 +154,11 @@
     margin-left: 30px;
 }
 
+.funfact{
+    max-width: 270px;
+    right: 90px;
+}
+
 .image{
     flex-basis: 20%;
     position: relative;
@@ -205,14 +172,16 @@
     border-radius: 20px;
     box-shadow: 8px 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
-    right: 0px;
+    right: -20px;
     transition: 1.5s;
+    width: 350px;
 }
 
 .exp_image{
-    margin-right: 10px;
     margin-bottom: 30px;
     overflow: hidden;
+    height: 310px;
+    min-width: 155px;
 }
 
 
@@ -233,14 +202,13 @@
     left: 0;
   }
 
-  .layer2 {
+.layer2 {
     position: absolute;
     top: 100px;
-    left: 30px;
     font-family: Silkscreen;
     color: white;
     line-height: 20px;
-  }
+}
 
 .container{
     display: flex;
@@ -250,7 +218,11 @@
 
 #experience{
     margin-top: 50px;
+    align-items: center;
+    justify-items: center;
+    left: 50%;
 }
+
 
 .exp_text{
     font-family: "Anton";
@@ -261,12 +233,17 @@
     margin-bottom: 40px;
 }
 
+.bio_text{
+    max-width: 300px;
+    left: 40px;
+}
+
 #break{
     padding: 50px 10px 50px 10px;
-    background-color: #a5aad1;
+    background-color: #b3a4c5;
     line-height: 1;
-    margin: 75px 500px 40px 500px;
-    border: 7px solid #8387a8;
+    margin: 75px 400px 40px 400px;
+    border: 7px solid #8d819c;
     border-radius: 50px;
     vertical-align: middle;
 }
@@ -321,6 +298,50 @@
     animation: animate calc(3s * var(--i)) linear infinite;
 }
 
-body{
-    background-image: linear-gradient(white, #aa9cc0, #a99bbf, #c8acc3, #d2abc0, white);
+#spotify{
+    padding: 50px 40px 50px 40px;
+    background-color: #a5aad1;
+    line-height: 1;
+    margin: 75px 250px 0px 250px;
+    border: 7px solid #8387a8;
+    border-radius: 50px;
+    vertical-align: middle;
+
+    /* text */
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-family: "Avantgarde", cursive;
+    color: white;
+}
+
+.playlists{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+#contact{
+    background-color: #05080f;
+    height: 120px;
+    text-align: center;
+}
+
+.button1{
+    height: 60px;
+    display: flex;
+    gap: 50px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    display: inline-block;
+    margin: 10px 15px 0px 15px;
+
+}
+
+.button1:hover{
+    transform: scale(1.1);
 }
