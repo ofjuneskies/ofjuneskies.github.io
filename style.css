@@ -185,10 +185,10 @@ nav{
 }
 
 
-.wrapper:hover .me_image {
+/*.wrapper:hover .me_image {
     transition: 1.5s;
     right: 300px; 
-}
+}*/
 
 .wrapper:hover .exp_image{
     transition: 0.8s;
