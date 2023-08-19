@@ -1,3 +1,16 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
 *{
     margin: 0;
     padding: 0;
@@ -154,11 +167,6 @@ nav{
     margin-left: 30px;
 }
 
-.funfact{
-    max-width: 270px;
-    right: 90px;
-}
-
 .image{
     flex-basis: 20%;
     position: relative;
@@ -172,9 +180,8 @@ nav{
     border-radius: 20px;
     box-shadow: 8px 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
-    right: -20px;
     transition: 1.5s;
-    width: 350px;
+    width: 22.5vw;
 }
 
 .exp_image{
@@ -185,10 +192,10 @@ nav{
 }
 
 
-/*.wrapper:hover .me_image {
+.wrapper:hover .me_image {
     transition: 1.5s;
-    right: 300px; 
-}*/
+    right: 25vw; 
+}
 
 .wrapper:hover .exp_image{
     transition: 0.8s;
