@@ -154,6 +154,7 @@ nav{
 .under_text{
     line-height: 1.3vw;
     font-size: 1vw;
+    max-width: 20vw;
 }
 
 .about_text{
